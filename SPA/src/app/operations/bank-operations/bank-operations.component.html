@@ -1,3 +1,5 @@
-<p>
-  bank-operations works!
-</p>
+<div class="bank-operations">
+    <a routerLinkActive="active" [routerLinkActiveOptions]="{ exact: true}" routerLink="/">С карты любого банка</a>
+    <a routerLinkActive="active" routerLink="/ib-operations">Из своего интернет-банка</a>
+    <router-outlet></router-outlet>
+</div>

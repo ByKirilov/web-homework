@@ -5,6 +5,24 @@
     margin-bottom: 20px;
 }
 
+a:link, a:visited, a:hover, a:active {
+    background: transparent;
+    color: cornflowerblue;
+    text-decoration: none;
+    display: inline-block;
+    padding-right: 10%;
+    font-size: 150%;
+    margin-bottom: 20px;
+}
+
+.active {
+    background: transparent;
+    color: black !important;
+    text-decoration: none;
+    display: inline-block;
+    padding-right: 10%;
+}
+
 .operations {
     padding-right: 10%;
     padding-left: 10%;

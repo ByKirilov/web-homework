@@ -1,0 +1,22 @@
+.bank-operations {
+    padding-right: 10%;
+    /*padding-left: 5%;*/
+}
+
+a:link, a:visited, a:hover, a:active {
+    background: transparent;
+    color: cornflowerblue;
+    text-decoration: none;
+    display: inline-block;
+    padding-right: 5%;
+    padding-left: 1%;
+    font-size: 100%;
+    margin-bottom: 20px;
+}
+
+.active {
+    background: transparent;
+    color: black !important;
+    text-decoration: none;
+    display: inline-block;
+}
