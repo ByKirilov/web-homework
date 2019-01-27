@@ -1,0 +1,128 @@
+* {
+    font-family: Verdana, sans-serif;
+    color: #284046;
+}
+
+.gallery {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+
+.photo {
+    width: 30%;
+    border: 0.5px #284046 solid;
+    padding: 1%;
+    margin-bottom: 2%;
+    border-radius: 5%;
+}
+
+.info {
+    text-align: center;
+}
+
+/* @media screen and (max-width: 1600px) {
+    .photo {
+        display: inline-block;
+        width: 41%;
+    }
+} */
+
+@media screen and (max-width: 768px) {
+    .photo {
+        flex-direction: column;
+        width: 500px;
+    }
+}
+
+img {
+    width: 100%;
+    border-radius: 5%;
+}
+
+.interesting-inf {
+    text-align: justify;
+    line-height: 1.2;
+    font-size: 125%;
+}
+
+.gallery,
+.interesting-inf,
+#show,
+h1 {
+    padding-left: 10%;
+    padding-right: 10%;
+}
+
+#checkbox{
+    visibility: hidden;
+}
+
+.interesting-inf {
+  display: block;
+  margin-top: 5px;
+  height: 50px;
+  outline: none;
+  overflow: hidden;
+}
+
+.btn:checked ~ div {
+    visibility: visible;
+    height: auto;
+}
+
+.btn:checked {
+    visibility: hidden;
+}
+
+.btn:checked ~ label {
+    display: none;
+}
+
+#show {
+    color: blue;
+    font-size: 110%;
+    margin-top: 1%;
+}
+
+.social {
+    padding-left: 30%;
+    padding-right: 30%;
+    margin: 1% 0 1% 0;
+    display: flex;
+    justify-content: space-around;
+
+}
+
+#twitter {
+    background-image: url(pictures/tws.png);
+}
+
+#vk {
+    background-image: url(pictures/vk.png);
+}
+
+#linkedin {
+    background-image: url(pictures/linkedin.png);
+}
+
+#fb {
+    background-image: url(pictures/fb.png)
+}
+
+#instagram {
+    background-image: url(pictures/instagram.png)
+}
+
+#whatsapp {
+    background-image: url(pictures/whatsapp.png)
+}
+
+#twitter,
+#instagram,
+#whatsapp,
+#linkedin,
+#vk,
+#fb {
+    width: 64px; height: 64px;
+}

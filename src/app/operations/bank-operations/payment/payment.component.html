@@ -1,0 +1,62 @@
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+<div class="row">
+  <div class="card-container">
+    <div class="row">
+      <div class="col">
+        <div class="card-container">
+
+          <div class="card-line">
+            <div class="icon-container">
+              <img src="assets/visa.png">
+              <img src="assets/master.png">
+              <img src="assets/maestro.png">
+            </div>
+          </div>
+
+          <div class="card-line">
+            <input type="text" name="cardname" id="cardnumber" placeholder="Номер карты" pattern="^\d{16}$">
+          </div>
+
+          <div class="card-line">
+            <div class="expdate_and_CVC">
+              <input type="text" name="expdate" id="expdate" placeholder="ММ/ГГ"
+                     pattern="^((0[1-9])|(1[0-2]))/((1[7-9])|(2[0-9])|(3[0-5]))$">
+              <input type="text" name="CVC" id="CVC" placeholder="CVC" pattern="^\d{3}$">
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="container">
+    <div class="row">
+      <div class="col">
+        <div class="order-data">
+
+          <div class="order-line">
+            <label for="_sum">Сумма</label>
+            <input type="text" name="sum" id="_sum" placeholder="от 1000 до 75000"
+                   pattern="(^[1-6]\d{4}$)|(^7[0-4]\d{3}$)|(^[1-9]\d{3}$)|(^75000$)">
+          </div>
+
+          <div class="order-line">
+            <label for="_comment">Комментарий</label>
+            <input type="text" name="_comment" id="_comment" placeholder="До 150 символов" pattern="^.{0,150}$">
+          </div>
+
+          <div class="order-line">
+            <label for="user-e-mail">Ваша эл.почта</label>
+            <input type="email" name="user-e-mail" id="user-e-mail" placeholder="Для квитанций об оплате">
+          </div>
+
+          <div class="order-line" id="last">
+            <input type="submit" value="Заплатить" class="btn">
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

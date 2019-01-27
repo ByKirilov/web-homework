@@ -1,0 +1,57 @@
+<form action="" class="_form">
+  <h2>Сформулируйте платёжку и загрузите её в свой банк для подписи</h2>
+  <div class="container">
+    <div class="field">
+      <label for="sender">От кого</label>
+      <input type="text" name="sender" id="sender" placeholder="ИНН или наименование плательщика">
+    </div>
+
+    <div class="field">
+      <!-- Bank identification code -->
+      <label for="BIС">БИК</label>
+      <input type="text" name="BIC" id="BIC">
+    </div>
+
+    <div class="field">
+      <label for="acc-num">Номер счёта</label>
+      <input type="text" name="account-number" id="acc-num">
+    </div>
+
+    <div class="field">
+      <label for="purpose">За что</label>
+      <input type="text" name="purpose" id="purpose" placeholder="Назначение платежа" value="{{ ndsValue }}" disabled> 
+      <!-- Доделать можно сделать flex -->
+      <p>
+        <button 
+          class="VAT"
+          type="button"
+          (click)="onClickValue('НДС 18%')"> НДС 18% </button>
+
+        <button 
+          class="VAT"
+          type="button"
+          (click)="onClickValue('НДС 10%')"> НДС 10% </button>
+
+        <button 
+          class="VAT"
+          type="button"
+          (click)="onClickValue('Без НДС')"> Без НДС </button>
+      </p>
+    </div>
+
+    <div class="field">
+      <label for="amount">Сколько</label>
+      <input type="text" name="amount" id="amount">
+    </div>
+
+    <div class="sbtn">
+      <input type="submit" name="get-file" id="submit" value="Получить файл для интернет-банка">
+    </div>
+    
+
+    <button
+      class="cbtn"
+      type="button"
+      (click)="eraseForm()">Очистить форму</button>
+  </div>
+</form>

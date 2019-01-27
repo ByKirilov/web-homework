@@ -1,0 +1,100 @@
+/*Все гавно, здесь плохо с адаптивной версткой.*/
+
+* {
+    font-family: Verdana, sans-serif;
+}
+._form { 
+    background-color: #f2f2f2;
+    margin-left: 30%;
+    margin-right: 30%;
+    border-radius: 2.5%;
+}
+
+h2 {
+    font-weight: normal;
+    color: #b03365;
+    text-align: center;
+    padding-top: 3.5%;
+}
+
+h2,
+.field label {
+    margin-left: 5%;
+    color: #b03365;
+}
+
+#submit {
+    padding: .5%;
+    width: 70%;
+    height: 35px;
+    font-size: 90%;
+    background: #D8BFD8;
+    border-radius: 15%;
+    color: #284046;
+}
+
+.cbtn,
+.sbtn {
+    margin: 1.5%;
+    padding: .5%;
+}
+
+.sbtn {
+    text-align: center;
+}
+
+.cbtn {
+    border: none;
+    color: #284046;
+    text-align: left;
+}
+
+.cbtn,
+#purpose {
+    background: transparent;
+}
+
+.container {
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.field {
+    margin: .5% 0 .5% 0;
+    padding: 1% 0 1% 0;
+    width: 100%;
+    height: 50px;
+    
+}
+
+.field p {
+    display: flex;
+    justify-content: center;
+}
+
+/* TODO: Смена цвета после нажатия на клавишу*/
+.VAT {
+    background: transparent;
+    border: none;
+    color: #284046;
+}
+
+.field input {
+    margin-right: 5%; 
+    float:right;
+    width: 70%;
+    height: 25px; /* Для размера инпута*/
+    border: .5px gray;
+    border-bottom-style: solid;
+    background: transparent;
+    color: #486d77;
+    font-size: 90%;
+}
+
+/* @media screen and (max-width: 768px) {
+    .field input { width: 150px; float:none; }
+    .field p {display: inline-block;}
+} */
