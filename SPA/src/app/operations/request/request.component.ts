@@ -1,4 +1,5 @@
 import { Component, OnInit, Input} from '@angular/core';
+import { Server } from '../../server';
 
 @Component({
   selector: 'app-request',
@@ -13,6 +14,7 @@ export class RequestComponent implements OnInit {
 
   @Input() clientName: string;
 
+
   clearForm() {
     (<HTMLFormElement>document.querySelector('form.column')).reset();
   }
@@ -21,7 +23,11 @@ export class RequestComponent implements OnInit {
     this.NDSvalue = Text;
   }
 
-  constructor() { }
+  // submitForm() {
+
+  // }
+
+  constructor(private server: Server) { }
 
   ngOnInit() {
   }
