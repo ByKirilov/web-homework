@@ -1,25 +1,24 @@
+* {
+    color: #284046;
+    font-family: Verdana, sans-serif;
+}
+
 main {
     padding: 0.2em;
 }
+
 p {
     color: grey;
-    /* font-size: 20px; */
-    margin: 0.15em;
-    margin-top: 20px; 
+    padding: 1%;
+    margin: 1% 3% 1% 3%;
 }
-
-
- .type {
-    margin-right: 10em;
-
-}  
 
 #inn[disabled]{
     background: transparent;
 }
 
 .lab{
-    width: 400px;
+    width: 50%;
 }
 
 .right {
@@ -27,24 +26,24 @@ p {
 }
 
 .flex {
-    padding-left: 10%;
-    padding-right: 10%;
-    display: flex;
+    padding-left: 20%;
+    padding-right: 20%;
 }
 .column {
     display: flex;
     flex-direction: column;
+    background-color: #f2f2f2;
+    width: 100%;
+    border-radius: 2.5%;
 }
 
 
 .lab {
     border: 0.5px lightgrey;
     border-bottom-style: solid;
-    
 }
 
 .NDS {
-    /* font-size: 15px; */
     background: transparent;
     border: none;
     color: grey;
@@ -54,24 +53,24 @@ p {
     color: black;
 }
 
-
-
-.subm {
+#subm {
     font-size: 15px;
-    color: grey;
-    background: transparent;
+    color: #284046;
+    /* background: transparent; */
     border-style: solid;
-    margin-top: 30px;
+    margin-top: 2%;
     width: 200px;
-    float: left;
+    margin-left: 3%;
 }
 
+/* Переместить влево */
 #clear {
     padding-top: 10px ;
     background: transparent;
     border: none;
-    color: lightblue;
-    float: left;
+    color: #284046;
+    /* float: left; */
     /* text-align: left; */
     width: 150px;
+    margin: 1% 0 1% 3%;
 }

@@ -2,23 +2,23 @@
     <form class="column" id="contactForm">
         <p>
             <label class="type">ИНН получателя
-                <input class="right lab" type="text" placeholder = "ИНН или название получателя" name="inn" value={{EmptyStr}} pattern="\d{12}|\d{10}">
+                <input class="right lab" type="text" placeholder = "ИНН или название получателя" name="inn" pattern="\d{12}|\d{10}">
             </label>
         </p>
         <p> 
             <label class="type">БИК
-                <input class="right lab" type="text" name="bik" value="{{EmptyStr}}" pattern="\d{9}">
+                <input class="right lab" type="text" name="bik" pattern="\d{9}">
             </label>
         </p>
         <p>
             <label class="type">Номер счета
-                <input class="right lab" type="text" name="accountnumber" value="{{EmptyStr}}" pattern="\d{20}">
+                <input class="right lab" type="text" name="accountnumber" pattern="\d{20}">
             </label>
         </p>
         <!-- <p class="right" id = "smalltxt">Назначение платежа</p> -->
         <p>
           <label class="type">За что
-              <input id = "inn" class="right lab" type="text" placeholder="Назначение платежа" name="" value="{{NDSvalue}}" disabled>
+              <input id = "inn" class="right lab" type="text" placeholder="Назначение платежа" name="inn" value="{{ NDSvalue }}"  disabled>
           </label>
         </p>
         <p>
@@ -34,17 +34,17 @@
         </p>
         <p>
             <label class="type">Сколько
-                <input class="right lab" type="text" name="howmuch" value="{{EmptyStr}}" pattern="(^[1-6]\d{4}$)|(^7[0-4]\d{3}$)|(^[1-9]\d{3}$)|(^75000$)">
+                <input class="right lab" type="text" name="howmuch" pattern="(^[1-6]\d{4}$)|(^7[0-4]\d{3}$)|(^[1-9]\d{3}$)|(^75000$)">
             </label>
         </p>
           <p>
               <label class="type">Номер телефона
-                  <input class="right lab" type="text" name="howmuch" value="{{EmptyStr}}" pattern="^\+\d{1,3}\s\d{3}\s\d{3}(-\d{2}){2}$">
+                  <input class="right lab" type="text" name="howmuch" pattern="^\+\d{1,3}\s\d{3}\s\d{3}(-\d{2}){2}$">
               </label>
           </p>
           <p>
               <label class="type">Эл. почта
-                  <input class="right lab" type="email" name="phonenumber" value="{{EmptyStr}}">
+                  <input class="right lab" type="email" name="phonenumber">
               </label>
           </p>
     <!-- <div class="subm"><input type="submit" id = "subm" value="Создать платеж"></div> -->
