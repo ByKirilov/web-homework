@@ -1,30 +1,20 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
-import {Route, RouterModule, Routes} from '@angular/router';
-
-import { AppComponent } from './app.component';
-import { ClientInfoComponent } from './client-info/client-info.component';
-import { OperationsComponent } from './operations/operations.component';
-import { CompanyInfoComponent } from './company-info/company-info.component';
-import { BankOperationsComponent } from './operations/bank-operations/bank-operations.component';
-import { RequestComponent } from './operations/request/request.component';
-import { PaymentComponent } from './operations/bank-operations/payment/payment.component';
-import { IbPaymentComponent } from './operations/bank-operations/ib-payment/ib-payment.component';
 import { FormsModule } from '@angular/forms';
 
-const operationsRoutes: Routes = [
-  { path: '', component: BankOperationsComponent,
-    children: [
-        { path: '', component: PaymentComponent },
-      { path: 'ib-operations', component: IbPaymentComponent }]},
-  { path: 'request', component: RequestComponent }
-];
-
-
-// const bankOperationsRoutes: Routes = [
-//   { path: 'payment', component: PaymentComponent },
-//   { path: 'ib-payment', component: IbPaymentComponent }
-// ];
+import { AppComponent } from './app.component';
+import { MainPageComponent } from './main-page/main-page.component';
+import { ClientInfoComponent } from './main-page/client-info/client-info.component';
+import { OperationsComponent } from './main-page/operations/operations.component';
+import { CompanyInfoComponent } from './main-page/company-info/company-info.component';
+import { BankOperationsComponent } from './main-page/operations/bank-operations/bank-operations.component';
+import { RequestComponent } from './main-page/operations/request/request.component';
+import { PaymentComponent } from './main-page/operations/bank-operations/payment/payment.component';
+import { IbPaymentComponent } from './main-page/operations/bank-operations/ib-payment/ib-payment.component';
+import { SigninComponent } from './auth/signin/signin.component';
+import { SignupComponent } from './auth/signup/signup.component';
+import { AuthService } from './auth/auth.service';
+import { AppRoutingModule } from './app-routing.module';
 
 @NgModule({
   declarations: [
@@ -35,15 +25,17 @@ const operationsRoutes: Routes = [
     BankOperationsComponent,
     RequestComponent,
     PaymentComponent,
-    IbPaymentComponent
+    IbPaymentComponent,
+    SigninComponent,
+    SignupComponent,
+    MainPageComponent
   ],
   imports: [
     BrowserModule,
     FormsModule,
-    RouterModule.forRoot(operationsRoutes),
-    // RouterModule.forRoot(bankOperationsRoutes)
+      AppRoutingModule
   ],
-  providers: [],
+  providers: [AuthService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

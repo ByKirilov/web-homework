@@ -1,3 +1,27 @@
 html {
     background-color: lightgray;
 }
+
+a:link, a:visited, a:hover, a:active {
+    background: transparent;
+    color: cornflowerblue;
+    text-decoration: none;
+    display: inline-block;
+    padding-top: 5px;
+    padding-right: 5%;
+    padding-left: 1%;
+    font-size: 130%;
+    margin-bottom: 20px;
+}
+
+a {
+    background: transparent;
+    color: cornflowerblue;
+    text-decoration: none;
+    display: inline-block;
+    padding-top: 5px;
+    padding-right: 5%;
+    padding-left: 1%;
+    font-size: 130%;
+    margin-bottom: 20px;
+}

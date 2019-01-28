@@ -1,6 +1,12 @@
 <html>
-    <!-- Доделать навигацию -->
-    <app-client-info [clientCompanyName] = "clientCompanyName"></app-client-info>
-    <app-operations></app-operations>
-    <app-company-info [companyName]="clientCompanyName"></app-company-info>
+    <div class="my_project">
+        <div class="auth">
+            <a routerLink="/">Main</a>
+            <a routerLink="/signup">SignUp</a>
+            <a routerLink="/signin">SignIn</a>
+            <!--перделать в кнопку-->
+            <a (click)="onLogout()">Logout</a>
+        </div>
+        <router-outlet></router-outlet>
+    </div>
 </html>
