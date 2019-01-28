@@ -10,7 +10,6 @@ import { BankOperationsComponent } from './operations/bank-operations/bank-opera
 import { RequestComponent } from './operations/request/request.component';
 import { PaymentComponent } from './operations/bank-operations/payment/payment.component';
 import { IbPaymentComponent } from './operations/bank-operations/ib-payment/ib-payment.component';
-import { Server } from './server'
 
 const operationsRoutes: Routes = [
   { path: '', component: BankOperationsComponent,
@@ -42,7 +41,7 @@ const operationsRoutes: Routes = [
     RouterModule.forRoot(operationsRoutes),
     // RouterModule.forRoot(bankOperationsRoutes)
   ],
-  providers: [Server],
+  providers: [],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

@@ -1,5 +1,4 @@
 import { Component, OnInit, Input} from '@angular/core';
-import { Server } from '../../server';
 
 @Component({
   selector: 'app-request',
@@ -25,7 +24,7 @@ export class RequestComponent implements OnInit {
 
   // }
 
-  constructor(private server: Server) { }
+  constructor() { }
 
   ngOnInit() {
   }
