@@ -1,24 +1,57 @@
+
+<!-- Вариант переписать это все на ngForm, чтобы достать данные. По-другому не знаю. -->
 <main class="flex">
-    <form class="column">
+    <form class="column" id="contactForm" (ngSubmit)="onSubmit(f)" #f="ngForm">
         <p>
             <label class="type">ИНН получателя
-                <input class="right lab" type="text" placeholder = "ИНН или название получателя" name="inn" pattern="\d{12}|\d{10}">
+                <input 
+                    id="inn" 
+                    class="right lab" 
+                    type="text" 
+                    placeholder = "ИНН или название получателя"  
+                    pattern="\d{12}|\d{10}"
+                    ngModel
+                    name="inn"
+                    required>
             </label>
         </p>
         <p> 
             <label class="type">БИК
-                <input class="right lab" type="text" name="bik" pattern="\d{9}">
+                <input 
+                    class="right lab" 
+                    type="text" 
+                    id="bik" 
+                    pattern="\d{9}"
+                    ngModel
+                    name="bik"
+                    required>
             </label>
         </p>
         <p>
             <label class="type">Номер счета
-                <input class="right lab" type="text" name="accountnumber" pattern="\d{20}">
+                <input 
+                    class="right lab" 
+                    type="text"
+                    id="acc-num" 
+                    pattern="\d{20}"
+                    ngModel
+                    name="accountnumber"
+                    required>
             </label>
         </p>
         <!-- <p class="right" id = "smalltxt">Назначение платежа</p> -->
         <p>
           <label class="type">За что
-              <input id = "inn" class="right lab" type="text" placeholder="Назначение платежа" name="inn" value="{{ NDSvalue }}"  disabled>
+              <input 
+                id = "purpose" 
+                class="right lab" 
+                type="text" 
+                placeholder="Назначение платежа" 
+                value="{{ NDSvalue }}"  
+                disabled
+                ngModel
+                name="purpose"
+                required>
           </label>
         </p>
         <p>
@@ -34,20 +67,44 @@
         </p>
         <p>
             <label class="type">Сколько
-                <input class="right lab" type="text" name="howmuch" pattern="(^[1-6]\d{4}$)|(^7[0-4]\d{3}$)|(^[1-9]\d{3}$)|(^75000$)">
+                <input 
+                    class="right lab" 
+                    type="text" 
+                    id="howmuch" 
+                    pattern="(^[1-6]\d{4}$)|(^7[0-4]\d{3}$)|(^[1-9]\d{3}$)|(^75000$)"
+                    ngModel
+                    name="howmuch"
+                    required>
             </label>
         </p>
           <p>
               <label class="type">Номер телефона
-                  <input class="right lab" type="text" name="howmuch" pattern="^\+\d{1,3}\s\d{3}\s\d{3}(-\d{2}){2}$">
+                  <input 
+                    class="right lab" 
+                    type="text" 
+                    id="phonenumber" 
+                    pattern="^\+\d{1,3}\s\d{3}\s\d{3}(-\d{2}){2}$"
+                    ngModel
+                    name="phonenumber"
+                    required>
               </label>
           </p>
           <p>
               <label class="type">Эл. почта
-                  <input class="right lab" type="email" name="phonenumber">
+                  <input 
+                    class="right lab" 
+                    type="email"
+                    id="e-mail"
+                    ngModel
+                    name="e-mail"
+                    email
+                    required>
               </label>
           </p>
-    <div class="subm"><input type="submit" id = "subm" value="Создать платеж"></div>
+    <button
+        class="subm"
+        type="submit"
+        [disabled]="!f.valid">Создать платеж</button>
     <button type="button" id ="clear" (click) = "clearForm()">Очистить форму</button>
     </form>
 </main>

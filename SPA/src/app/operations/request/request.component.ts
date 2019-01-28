@@ -1,4 +1,5 @@
-import { Component, OnInit, Input} from '@angular/core';
+import { Component, OnInit, Input, ViewChild} from '@angular/core';
+import { NgForm } from '@angular/forms';
 
 @Component({
   selector: 'app-request',
@@ -8,8 +9,14 @@ import { Component, OnInit, Input} from '@angular/core';
 export class RequestComponent implements OnInit {
 
   NDSvalue = '';
+  requests: any[] = [];
 
   @Input() clientName: string;
+  @ViewChild('f') requestForm: NgForm;
+
+  onSubmit(form: NgForm) {
+    this.requests.push(form.value);
+  }
 
   clearForm() {
     (<HTMLFormElement>document.querySelector('form.column')).reset();
