@@ -18,6 +18,7 @@ export class RequestComponent implements OnInit {
     this.requests.push(form.value);
   }
 
+
   clearForm() {
     (<HTMLFormElement>document.querySelector('form.column')).reset();
   }
@@ -25,6 +26,10 @@ export class RequestComponent implements OnInit {
   onClickValue(Text: string) {
     this.NDSvalue = Text;
   }
+
+  // submitForm() {
+
+  // }
 
   constructor() { }
 
