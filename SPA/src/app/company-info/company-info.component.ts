@@ -9,7 +9,7 @@ export class CompanyInfoComponent implements OnInit {
 
   companyFirstPhoto = 'assets/lake.jpg';
   firstPhotoPrice = 123;
-  companySecondPhoto = 'assets/field.jpg';
+  companySecondPhoto = 'assets/CatAws.jpg';
   secondPhotoPrice = 456;
   companyThirdPhoto = 'assets/road.jpg';
   thirdPhotoPrice = 789;

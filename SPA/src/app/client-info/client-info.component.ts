@@ -8,10 +8,10 @@ import { Component, OnInit, Input } from '@angular/core';
 export class ClientInfoComponent implements OnInit {
   clientNumber = '+79095647899';
   clientSite = 'www.company.ru';
-  clientMailAdress = 'bla@blabla.ru';
+  clientMailAdress = 'manager@tochka.ru';
   clientCompanyInfo = 'www.company.ru/info';
   clientRequisites = 'www.company.ru/requisites';
-  clientLogoPath = 'assets/logo.jpg';
+  clientLogoPath = 'assets/scuns.jpg';
 
   @Input() clientCompanyName: string;
 

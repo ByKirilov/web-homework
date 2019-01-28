@@ -1,25 +1,45 @@
-<form action="" class="_form">
+<form class="_form" (ngSubmit)="onSubmit(f)" #f="ngForm">
   <h2>Сформулируйте платёжку и загрузите её в свой банк для подписи</h2>
   <div class="container">
     <div class="field">
       <label for="sender">От кого</label>
-      <input type="text" name="sender" id="sender" placeholder="ИНН или наименование плательщика">
+      <input 
+        type="text" 
+        id="sender" 
+        placeholder="ИНН или наименование плательщика" 
+        ngModel 
+        name="sender"
+        pattern="\d{12}|\d{10}" 
+        reqiered>
     </div>
 
     <div class="field">
       <!-- Bank identification code -->
       <label for="BIС">БИК</label>
-      <input type="text" name="BIC" id="BIC">
+      <input 
+        type="text" 
+        id="BIC" 
+        ngModel 
+        name="BIC"
+        pattern="\d{9}"
+        required>
     </div>
 
     <div class="field">
       <label for="acc-num">Номер счёта</label>
-      <input type="text" name="account-number" id="acc-num">
+      <input 
+        type="text" 
+        id="acc-num" 
+        ngModel 
+        name="acc-num"
+        pattern="\d{20}"
+        required>
     </div>
 
     <div class="field">
       <label for="purpose">За что</label>
-      <input type="text" name="purpose" id="purpose" placeholder="Назначение платежа" value="{{ ndsValue }}" disabled> 
+      <input type="text" id="purpose" placeholder="Назначение платежа" value="{{ ndsValue }}" 
+        ngModel name="purpose" disabled required> 
       <!-- Доделать можно сделать flex -->
       <p>
         <button 
@@ -41,13 +61,22 @@
 
     <div class="field">
       <label for="amount">Сколько</label>
-      <input type="text" name="amount" id="amount">
+      <input 
+        type="text" 
+        id="amount" 
+        ngModel 
+        name="amount"
+        pattern="(^[1-6]\d{4}$)|(^7[0-4]\d{3}$)|(^[1-9]\d{3}$)|(^75000$)"
+        required>
     </div>
 
+
     <div class="sbtn">
-      <input type="submit" name="get-file" id="submit" value="Получить файл для интернет-банка">
+      <button
+      class="sbtnn"
+      type="submit"
+      [disabled]="!f.valid">Получить файл для интернет банка</button>
     </div>
-    
 
     <button
       class="cbtn"

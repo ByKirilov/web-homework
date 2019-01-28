@@ -10,6 +10,7 @@ import { BankOperationsComponent } from './operations/bank-operations/bank-opera
 import { RequestComponent } from './operations/request/request.component';
 import { PaymentComponent } from './operations/bank-operations/payment/payment.component';
 import { IbPaymentComponent } from './operations/bank-operations/ib-payment/ib-payment.component';
+import { FormsModule } from '@angular/forms';
 
 const operationsRoutes: Routes = [
   { path: '', component: BankOperationsComponent,
@@ -38,6 +39,7 @@ const operationsRoutes: Routes = [
   ],
   imports: [
     BrowserModule,
+    FormsModule,
     RouterModule.forRoot(operationsRoutes),
     // RouterModule.forRoot(bankOperationsRoutes)
   ],
