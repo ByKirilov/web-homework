@@ -1,5 +1,5 @@
 <main class="flex">
-    <form class="column">
+    <form class="column" id="contactForm">
         <p>
             <label class="type">ИНН получателя
                 <input class="right lab" type="text" placeholder = "ИНН или название получателя" name="inn" pattern="\d{12}|\d{10}">
@@ -47,7 +47,11 @@
                   <input class="right lab" type="email" name="phonenumber">
               </label>
           </p>
-    <div class="subm"><input type="submit" id = "subm" value="Создать платеж"></div>
+    <!-- <div class="subm"><input type="submit" id = "subm" value="Создать платеж"></div> -->
+    <button
+        class="subm"
+        type="button"
+        (click)="onSubmit()">Создать платеж</button>
     <button type="button" id ="clear" (click) = "clearForm()">Очистить форму</button>
     </form>
 </main>
