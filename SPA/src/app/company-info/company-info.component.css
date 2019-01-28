@@ -21,13 +21,6 @@
     text-align: center;
 }
 
-/* @media screen and (max-width: 1600px) {
-    .photo {
-        display: inline-block;
-        width: 41%;
-    }
-} */
-
 @media screen and (max-width: 768px) {
     .photo {
         flex-direction: column;
@@ -91,7 +84,7 @@ h1 {
     margin: 1% 0 1% 0;
     display: flex;
     justify-content: space-around;
-
+    flex-wrap: wrap;
 }
 
 #twitter {
@@ -125,4 +118,6 @@ h1 {
 #vk,
 #fb {
     width: 64px; height: 64px;
+    margin-top: 5px;
+    margin-right: 5px;
 }
