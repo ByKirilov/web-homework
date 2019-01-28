@@ -9,8 +9,6 @@ export class RequestComponent implements OnInit {
 
   NDSvalue = '';
 
-  EmptyStr = '';
-
   @Input() clientName: string;
 
   clearForm() {

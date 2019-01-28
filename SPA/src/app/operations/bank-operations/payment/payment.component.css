@@ -1,6 +1,7 @@
-/* * {
-    box-sizing: border-box;
-  } */
+* {
+    font-family: Verdana, sans-serif;
+    color: #284046; 
+}
 
 .col {
     -ms-flex: 50%;
@@ -8,11 +9,6 @@
     padding: 0 16px;
     /*width: 100%;*/
 }
-/* .wrapper::after {
-  content: "";
-  clear: both;
-  display: table;
-} */
 
 .container {
     padding: 5px 5% 15px 5%;
