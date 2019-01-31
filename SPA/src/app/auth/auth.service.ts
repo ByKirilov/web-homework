@@ -20,9 +20,14 @@ export class AuthService {
             .then(
                 response => {
                     this.router.navigate(['/']);
+                    // @ts-ignore
+                    // @ts-ignore
                     firebase.auth().currentUser.getIdToken()
                         .then(
                             (token: string) => this.token = token
+                        )
+                        .then(
+                            () => console.log(this.token)
                         );
                 }
             )
@@ -34,6 +39,8 @@ export class AuthService {
     logout() {
         firebase.auth().signOut();
         this.token = null;
+        console.log('LogOut success!');
+        console.log(this.token);
     }
 
     getToken() {

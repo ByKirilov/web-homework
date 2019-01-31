@@ -22,4 +22,8 @@ export class AppComponent implements OnInit {
       authDomain: 'web-homework.firebaseapp.com'
     });
   }
+
+  onLogout() {
+    this.authService.logout();
+  }
 }

@@ -2,7 +2,20 @@ html {
     background-color: lightgray;
 }
 
-a:link, a:visited, a:hover, a:active {
+a:link, a:visited, a:hover {
+    background: transparent;
+    color: cornflowerblue;
+    text-decoration: none;
+    display: inline-block;
+    padding-top: 5px;
+    padding-right: 5%;
+    padding-left: 1%;
+    font-size: 130%;
+    margin-bottom: 20px;
+}
+
+a:active {
+    border: 1px cornflowerblue solid;
     background: transparent;
     color: cornflowerblue;
     text-decoration: none;

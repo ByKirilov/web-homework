@@ -75,7 +75,7 @@
                 type="text" 
                 id="_comment" 
                 placeholder="До 150 символов" 
-                pattern="^.{0,150}$"
+                pattern="^(?!.*<script)(.{0,150})$"
                 ngModel
                 name="_comment">
             </div>
